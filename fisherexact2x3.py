@@ -9,8 +9,7 @@ def calculate_fisher_exact_2x3(table):
             sub_table = [[table[0][i], table[0][j]], [table[1][i], table[1][j]]]
             _, p_value = fisher_exact(sub_table)
             p_values.append(p_value)
-
-    # Correcting the calculation of the combined p-value using Fisher's method
+            
     combined_p_value = chi2.sf(-2 * sum(map(lambda x: math.log(x), p_values)), df=2*len(p_values))
 
     return combined_p_value
