@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     p_value = calculate_fisher_exact_2x3(contingency_table)
 
-    print("Fisher exact test p-value for 2x3 table:", p_value)
+    print(f"Fisher exact test p-value for 2x3 table: {p_value}")
